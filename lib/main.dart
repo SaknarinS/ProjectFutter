@@ -27,17 +27,17 @@ class TestStateflull extends StatefulWidget {
 
 class _TestStateflull extends State<TestStateflull> {
 
-  List<Color> color = [Colors.red,Colors.yellow];
+  List<Color> color = [Colors.red,Colors.yellow,Colors.green,Colors.blue];
 int countColors =0;
 onchangColors(){
-  if (countColors == 0){
+  if (countColors > 2){
     setState(() {
-      countColors =1;
+      countColors =0;
     });
   }
   else{
     setState((){
-      countColors = 0;
+      countColors = countColors+1;
     });
   }
 }
@@ -77,6 +77,3 @@ onchangColors(){
 
   }
 }
-
-
-
