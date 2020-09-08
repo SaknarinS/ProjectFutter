@@ -26,6 +26,21 @@ class TestStateflull extends StatefulWidget {
 }
 
 class _TestStateflull extends State<TestStateflull> {
+
+  List<Color> color = [Colors.red,Colors.yellow];
+int countColors =0;
+onchangColors(){
+  if (countColors == 0){
+    setState(() {
+      countColors =1;
+    });
+  }
+  else{
+    setState((){
+      countColors = 0;
+    });
+  }
+}
   int count = 0;
   @override
   Widget build(BuildContext context) {
@@ -41,154 +56,27 @@ class _TestStateflull extends State<TestStateflull> {
           RaisedButton(
             onPressed: (){
               setState(() {
-                count = count+1;
+                count = count+2;
                 
               });
             }
+          ),
+          FlatButton(
+            onPressed: (){
+              onchangColors();
+            },
+            child: Container(
+              height: 100,
+              width: 200,
+              color: color[countColors],
+            ),
           )
-
         ]
       
     );
+
   }
 }
 
 
 
-
-class TestWidget extends StatelessWidget{
-  @override
-  Widget build(BuildContext context) {
-   return GridView.count(
-     crossAxisCount: 3,
-     children: [
-       Container(
-         height: 200,
-         color: Colors.teal,
-        ),
-        Container(
-         height: 200,
-         color: Colors.greenAccent,
-        ),
-        Container(
-         height: 200,
-         color: Colors.lightBlue,
-        ),
-        Container(
-         height: 200,
-         color: Colors.black,
-        ),
-        Container(
-         height: 200,
-         color: Colors.redAccent,
-        ),
-        Container(
-         height: 200,
-         color: Colors.yellowAccent,
-        ),
-        Container(
-         height: 200,
-         color: Colors.green,
-        ),
-        Container(
-         height: 200,
-         color: Colors.blue,
-        ),
-        Container(
-         height: 200,
-         color: Colors.teal,
-        ),
-        Container(
-         height: 200,
-         color: Colors.greenAccent,
-        ),
-        Container(
-         height: 200,
-         color: Colors.lightBlue,
-        ),
-        Container(
-         height: 200,
-         color: Colors.black,
-        ),
-        Container(
-         height: 200,
-         color: Colors.redAccent,
-        ),
-        Container(
-         height: 200,
-         color: Colors.yellowAccent,
-        ),
-        Container(
-         height: 200,
-         color: Colors.green,
-        ),
-        Container(
-         height: 200,
-         color: Colors.blue,
-        ),Container(
-         height: 200,
-         color: Colors.teal,
-        ),
-        Container(
-         height: 200,
-         color: Colors.greenAccent,
-        ),
-        Container(
-         height: 200,
-         color: Colors.lightBlue,
-        ),
-        Container(
-         height: 200,
-         color: Colors.black,
-        ),
-        Container(
-         height: 200,
-         color: Colors.redAccent,
-        ),
-        Container(
-         height: 200,
-         color: Colors.yellowAccent,
-        ),
-        Container(
-         height: 200,
-         color: Colors.green,
-        ),
-        Container(
-         height: 200,
-         color: Colors.blue,
-        ),Container(
-         height: 200,
-         color: Colors.teal,
-        ),
-        Container(
-         height: 200,
-         color: Colors.greenAccent,
-        ),
-        Container(
-         height: 200,
-         color: Colors.lightBlue,
-        ),
-        Container(
-         height: 200,
-         color: Colors.black,
-        ),
-        Container(
-         height: 200,
-         color: Colors.redAccent,
-        ),
-        Container(
-         height: 200,
-         color: Colors.yellowAccent,
-        ),
-        Container(
-         height: 200,
-         color: Colors.green,
-        ),
-        Container(
-         height: 200,
-         color: Colors.blue,
-        ),
-     ],
-   );
-  }
-}
