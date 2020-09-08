@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
        body: Container(
-        color: Colors.red[50],
+        color: Colors.red[200],
         child: TestWidget(),
         height: 800,
         width: 500,
@@ -23,37 +23,14 @@ class MyApp extends StatelessWidget {
 class TestWidget extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
-   return Column(
-    mainAxisAlignment: MainAxisAlignment.center,
-    crossAxisAlignment: CrossAxisAlignment.center,
-    children: [
-      Container(
-        height: 100.0,
-        width: 50.0,
-        color: Colors.red[500],
-      ),
-      Container(
-        height: 100.0,
-        width: 50.0,
-        color: Colors.green[400],
-      ),
-      Container(
-        height: 100.0,
-        width: 50.0,
-        color: Colors.yellow[300],
-      ),
-      Container(
-        height: 100.0,
-        width: 50.0,
-        color: Colors.blue[300],
-      ),
-      Container(
-        height: 100.0,
-        width: 50.0,
-        color: Colors.pink[200],
-      ),
-
-    ],  
+   return Center(
+    
+     child: Container(
+       height: 200,
+       width:200,
+       color: Colors.red,
+     )
    );
+  
   }
 }
