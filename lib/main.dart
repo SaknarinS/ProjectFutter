@@ -23,13 +23,30 @@ class MyApp extends StatelessWidget {
 class TestWidget extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
-   return Center(
-    
-     child: Container(
-       height: 200,
-       width:200,
-       color: Colors.red,
-     )
+   return Column(
+     mainAxisAlignment: MainAxisAlignment.center,
+     children: [
+       Container(
+         color: Colors.red,
+         height: 200,
+         width: 200,
+       ),
+       Container(
+         alignment: Alignment.center,
+         color: Colors.blue,
+         height: 300,
+         width: 300,
+         child: Text(
+           "Hello",
+           style: TextStyle(
+             fontSize: 50.0,
+             color: Colors.pink,
+
+           ),
+         ),
+       ),
+     ],
+
    );
   
   }
