@@ -23,45 +23,33 @@ class MyApp extends StatelessWidget {
 class TestWidget extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
-   return Column(
+   return ListView(
      children: [
        Container(
-         margin: EdgeInsets.only(bottom: 30,top: 60),
-         padding: EdgeInsets.only(left: 50,),
-         color: Colors.red,
-         height: 100,
-         width: 100,
-         child: Container(
-           color: Colors.yellow
-         ),
-       ),
-       Container(
-         alignment: Alignment.center,
-         color: Colors.blue,
-         height: 150,
-         width: 150,
-         child: Text(
-           "Hello",
-           style: TextStyle(
-             fontSize: 50.0,
-             color: Colors.pink,
-        
-           ),
-         ),
-       ),
-       Expanded(
-         child: Container(
-           color: Colors.white,
-         ),
+         height: 200,
+         color: Colors.teal,
         ),
-        Expanded(
-         child: Container(
-           color: Colors.green,
-         ),
+        Container(
+         height: 200,
+         color: Colors.greenAccent,
+        ),
+        Container(
+         height: 200,
+         color: Colors.lightBlue,
+        ),
+        Container(
+         height: 200,
+         color: Colors.black,
+        ),
+        Container(
+         height: 200,
+         color: Colors.redAccent,
+        ),
+        Container(
+         height: 200,
+         color: Colors.cyan,
         )
      ],
-
    );
-  
   }
 }
