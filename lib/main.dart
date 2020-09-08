@@ -23,13 +23,17 @@ class MyApp extends StatelessWidget {
 class TestWidget extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
-   return Row(
+   return Column(
      children: [
        Container(
-         margin: EdgeInsets.only(left: 20, right: 30),
+         margin: EdgeInsets.only(bottom: 30,top: 60),
+         padding: EdgeInsets.only(left: 50,),
          color: Colors.red,
          height: 100,
          width: 100,
+         child: Container(
+           color: Colors.yellow
+         ),
        ),
        Container(
          alignment: Alignment.center,
