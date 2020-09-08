@@ -20,6 +20,7 @@ class MyApp extends StatelessWidget {
   }
 }
 class TestStateflull extends StatefulWidget {
+
   @override
   _TestStateflull createState() => _TestStateflull();
 }
@@ -39,7 +40,10 @@ class _TestStateflull extends State<TestStateflull> {
           ),
           RaisedButton(
             onPressed: (){
-
+              setState(() {
+                count = count+1;
+                
+              });
             }
           )
 
