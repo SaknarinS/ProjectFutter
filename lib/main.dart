@@ -23,10 +23,11 @@ class MyApp extends StatelessWidget {
 class TestWidget extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
-   return Image.asset(
-     "assets/Rem1.png",
-     scale: 8.0,
-    );
+   return Image.network(
+     "https://www.vippng.com/png/detail/22-220768_re-zero-rem-anime-png-rem-anime-png.png",
+     scale: 1.0,
+    
+   );
     
   }
 }
