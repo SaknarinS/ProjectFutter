@@ -10,9 +10,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
        body: Container(
-        color: Colors.red,
+        color: Colors.red[50],
         child: TestWidget(),
-        height: 1000,
+        height: 600,
         width: 500,
       )
     ),
@@ -23,13 +23,9 @@ class MyApp extends StatelessWidget {
 class TestWidget extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
-   return Text(
-     'Hello!',
-     style: TextStyle(
-       fontSize: 50,
-       color: Color(0xFFB2EBF2),
-       fontWeight: FontWeight.w800
-     ),
+   return Image.asset(
+     "assets/Rem1.png",
+     scale: 8.0,
     );
     
   }
