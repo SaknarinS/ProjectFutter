@@ -45,10 +45,20 @@ class TestWidget extends StatelessWidget{
            style: TextStyle(
              fontSize: 50.0,
              color: Colors.pink,
-
+        
            ),
          ),
        ),
+       Expanded(
+         child: Container(
+           color: Colors.white,
+         ),
+        ),
+        Expanded(
+         child: Container(
+           color: Colors.green,
+         ),
+        )
      ],
 
    );
